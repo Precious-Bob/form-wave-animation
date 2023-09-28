@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(39, 173, 106);
+  font-family: 'Muli', sans-serif;
+  display: flex;
+  margin: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.container {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 20px; /* Reduced padding for smaller screens */
+  border-radius: 5px;
+  max-width: 80%; /* Centered container and limit width on smaller screens */
+}
+
+.container h1 {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 20px; /* Reduced margin for smaller screens */
+  font-size: 24px; /* Increased font size for smaller screens */
+}
+
+.container a {
+  text-decoration: none;
+  color: lightgreen;
+}
+
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  width: 100%;
+  background: lightgreen;
+  padding: 15px;
+  font-family: inherit;
+  font-size: 16px;
+  border: 0;
+  border-radius: 5px;
+}
+
+.btn:focus {
+  outline: 0;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.form-control {
+  position: relative;
+  margin: 20px 0 30px; /* Reduced margin for smaller screens */
+  width: 100%; /* Full width on smaller screens */
+}
+
+.form-control input {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px #fff solid;
+  display: block;
+  width: 100%;
+  padding: 10px 0; /* Reduced padding for smaller screens */
+  font-size: 16px; /* Decreased font size for smaller screens */
+  color: #fff;
+}
+
+.text {
+  margin-top: 20px; /* Reduced margin for smaller screens */
+}
+
+.form-control label {
+  color: #fff;
+  position: absolute;
+  top: 10px; /* Reduced top position for smaller screens */
+  left: 0;
+}
+
+.form-control input:focus,
+.form-control input:valid {
+  outline: 0;
+  border-bottom-color: lightgreen;
+}
+
+.form-control label span {
+  display: inline-block;
+  font-size: 16px; /* Decreased font size for smaller screens */
+  min-width: 5px;
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-control input:focus + label span,
+.form-control input:valid + label span {
+  color: lightgreen;
+  transform: translateY(-20px); /* Reduced translateY for smaller screens */
+}
+
+/* Media Query for screens smaller than 768px (adjust the breakpoint as needed) */
+@media (max-width: 768px) {
+  .container {
+    max-width: 90%;
+  }
+
+  .container h1 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .btn {
+    font-size: 14px;
+  }
+
+  .form-control input {
+    font-size: 14px;
+    padding: 8px 0;
+  }
+
+  .text {
+    margin-top: 15px;
+  }
+
+  .form-control label {
+    top: 8px;
+  }
+
+  .form-control input:focus + label span,
+  .form-control input:valid + label span {
+    transform: translateY(-15px);
+  }
+
+  .form-control text {
+    font-size: small;
+  }
+}
